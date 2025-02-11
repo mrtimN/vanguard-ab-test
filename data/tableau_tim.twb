@@ -1,0 +1,868 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0114.1153                               -->
+<workbook original-version='18.1' source-build='2024.3.3 (20243.25.0114.1153)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='client_profiles+' inline='true' name='federated.073qwdw0v8y7w119507a702ywlgt' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='client_profiles' name='textscan.1p8spiy1kxhrcx1bpbqg60jsuaxs'>
+            <connection class='textscan' directory='/Users/timniwo/Documents/ironhack/week5/vanguard-ab-test/data' filename='client_profiles.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.1p8spiy1kxhrcx1bpbqg60jsuaxs' name='abtest.csv' table='[abtest#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='de_DE' separator=','>
+              <column datatype='integer' name='client_id' ordinal='0' />
+              <column datatype='string' name='visitor_id' ordinal='1' />
+              <column datatype='string' name='visit_id' ordinal='2' />
+              <column datatype='string' name='process_step' ordinal='3' />
+              <column datatype='datetime' name='date_time' ordinal='4' />
+              <column datatype='string' name='variation' ordinal='5' />
+              <column datatype='string' name='time_spent' ordinal='6' />
+              <column datatype='boolean' name='error' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1p8spiy1kxhrcx1bpbqg60jsuaxs' name='client_profiles.csv' table='[client_profiles#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='de_DE'>
+              <column datatype='integer' name='client_id' ordinal='0' />
+              <column datatype='integer' name='client_tenure_years' ordinal='1' />
+              <column datatype='integer' name='client_tenure_months' ordinal='2' />
+              <column datatype='integer' name='client_age' ordinal='3' />
+              <column datatype='string' name='gender' ordinal='4' />
+              <column datatype='integer' name='num_accounts' ordinal='5' />
+              <column datatype='string' name='balance' ordinal='6' />
+              <column datatype='integer' name='calls_6months' ordinal='7' />
+              <column datatype='integer' name='logins_6months' ordinal='8' />
+              <column datatype='string' name='activity_score' ordinal='9' />
+              <column datatype='string' name='login_activity' ordinal='10' />
+              <column datatype='string' name='calls_activity' ordinal='11' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[activity_score]' value='[client_profiles.csv].[activity_score]' />
+          <map key='[balance]' value='[client_profiles.csv].[balance]' />
+          <map key='[calls_6months]' value='[client_profiles.csv].[calls_6months]' />
+          <map key='[calls_activity]' value='[client_profiles.csv].[calls_activity]' />
+          <map key='[client_age]' value='[client_profiles.csv].[client_age]' />
+          <map key='[client_id (client_profiles.csv)]' value='[client_profiles.csv].[client_id]' />
+          <map key='[client_id]' value='[abtest.csv].[client_id]' />
+          <map key='[client_tenure_months]' value='[client_profiles.csv].[client_tenure_months]' />
+          <map key='[client_tenure_years]' value='[client_profiles.csv].[client_tenure_years]' />
+          <map key='[date_time]' value='[abtest.csv].[date_time]' />
+          <map key='[error]' value='[abtest.csv].[error]' />
+          <map key='[gender]' value='[client_profiles.csv].[gender]' />
+          <map key='[login_activity]' value='[client_profiles.csv].[login_activity]' />
+          <map key='[logins_6months]' value='[client_profiles.csv].[logins_6months]' />
+          <map key='[num_accounts]' value='[client_profiles.csv].[num_accounts]' />
+          <map key='[process_step]' value='[abtest.csv].[process_step]' />
+          <map key='[time_spent]' value='[abtest.csv].[time_spent]' />
+          <map key='[variation]' value='[abtest.csv].[variation]' />
+          <map key='[visit_id]' value='[abtest.csv].[visit_id]' />
+          <map key='[visitor_id]' value='[abtest.csv].[visitor_id]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[abtest.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;de&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;de_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[client_profiles.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;de&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;de_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>client_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[client_id]</local-name>
+            <parent-name>[abtest.csv]</parent-name>
+            <remote-alias>client_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>visitor_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[visitor_id]</local-name>
+            <parent-name>[abtest.csv]</parent-name>
+            <remote-alias>visitor_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>visit_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[visit_id]</local-name>
+            <parent-name>[abtest.csv]</parent-name>
+            <remote-alias>visit_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>process_step</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[process_step]</local-name>
+            <parent-name>[abtest.csv]</parent-name>
+            <remote-alias>process_step</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_time]</local-name>
+            <parent-name>[abtest.csv]</parent-name>
+            <remote-alias>date_time</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>variation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[variation]</local-name>
+            <parent-name>[abtest.csv]</parent-name>
+            <remote-alias>variation</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_spent</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[time_spent]</local-name>
+            <parent-name>[abtest.csv]</parent-name>
+            <remote-alias>time_spent</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>error</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[error]</local-name>
+            <parent-name>[abtest.csv]</parent-name>
+            <remote-alias>error</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>client_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[client_id (client_profiles.csv)]</local-name>
+            <parent-name>[client_profiles.csv]</parent-name>
+            <remote-alias>client_id</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>client_tenure_years</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[client_tenure_years]</local-name>
+            <parent-name>[client_profiles.csv]</parent-name>
+            <remote-alias>client_tenure_years</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>client_tenure_months</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[client_tenure_months]</local-name>
+            <parent-name>[client_profiles.csv]</parent-name>
+            <remote-alias>client_tenure_months</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>client_age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[client_age]</local-name>
+            <parent-name>[client_profiles.csv]</parent-name>
+            <remote-alias>client_age</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[client_profiles.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_accounts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_accounts]</local-name>
+            <parent-name>[client_profiles.csv]</parent-name>
+            <remote-alias>num_accounts</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>balance</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[balance]</local-name>
+            <parent-name>[client_profiles.csv]</parent-name>
+            <remote-alias>balance</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calls_6months</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[calls_6months]</local-name>
+            <parent-name>[client_profiles.csv]</parent-name>
+            <remote-alias>calls_6months</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>logins_6months</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[logins_6months]</local-name>
+            <parent-name>[client_profiles.csv]</parent-name>
+            <remote-alias>logins_6months</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>activity_score</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[activity_score]</local-name>
+            <parent-name>[client_profiles.csv]</parent-name>
+            <remote-alias>activity_score</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>login_activity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[login_activity]</local-name>
+            <parent-name>[client_profiles.csv]</parent-name>
+            <remote-alias>login_activity</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calls_activity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[calls_activity]</local-name>
+            <parent-name>[client_profiles.csv]</parent-name>
+            <remote-alias>calls_activity</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='abtest.csv' datatype='table' name='[__tableau_internal_object_id__].[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]' role='measure' type='quantitative' />
+      <column caption='client_profiles.csv' datatype='table' name='[__tableau_internal_object_id__].[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]' role='measure' type='quantitative' />
+      <column caption='Activity Score' datatype='string' name='[activity_score]' role='dimension' type='nominal' />
+      <column caption='Balance' datatype='string' name='[balance]' role='dimension' type='nominal' />
+      <column caption='Calls 6Months' datatype='integer' name='[calls_6months]' role='measure' type='quantitative' />
+      <column caption='Calls Activity' datatype='string' name='[calls_activity]' role='dimension' type='nominal' />
+      <column caption='Client Age' datatype='integer' name='[client_age]' role='measure' type='quantitative' />
+      <column caption='Client Id (Client Profiles.Csv)' datatype='integer' name='[client_id (client_profiles.csv)]' role='dimension' type='ordinal' />
+      <column caption='Client Tenure Months' datatype='integer' name='[client_tenure_months]' role='measure' type='quantitative' />
+      <column caption='Client Tenure Years' datatype='integer' name='[client_tenure_years]' role='measure' type='quantitative' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Login Activity' datatype='string' name='[login_activity]' role='dimension' type='nominal' />
+      <column caption='Logins 6Months' datatype='integer' name='[logins_6months]' role='measure' type='quantitative' />
+      <column caption='Num Accounts' datatype='integer' name='[num_accounts]' role='measure' type='quantitative' />
+      <column datatype='integer' datatype-customized='true' name='[time_spent]' role='dimension' type='ordinal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/gq/19wnck6n1lggc_91r4nzbjk80000gn/T/tableau-temp/#TableauTemp_17jbdxj145hj861emf8q41wshuk8.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/11/2025 02:38:03 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8' table='[Extract].[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]' type='table' />
+            <relation name='client_profiles.csv_275E10B70EF541348141CC172A1CBDD9' table='[Extract].[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]' type='table' />
+          </relation>
+          <cols>
+            <map key='[activity_score]' value='[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9].[activity_score]' />
+            <map key='[balance]' value='[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9].[balance]' />
+            <map key='[calls_6months]' value='[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9].[calls_6months]' />
+            <map key='[calls_activity]' value='[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9].[calls_activity]' />
+            <map key='[client_age]' value='[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9].[client_age]' />
+            <map key='[client_id (client_profiles.csv)]' value='[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9].[client_id]' />
+            <map key='[client_id]' value='[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8].[client_id]' />
+            <map key='[client_tenure_months]' value='[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9].[client_tenure_months]' />
+            <map key='[client_tenure_years]' value='[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9].[client_tenure_years]' />
+            <map key='[date_time]' value='[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8].[date_time]' />
+            <map key='[error]' value='[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8].[error]' />
+            <map key='[gender]' value='[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9].[gender]' />
+            <map key='[login_activity]' value='[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9].[login_activity]' />
+            <map key='[logins_6months]' value='[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9].[logins_6months]' />
+            <map key='[num_accounts]' value='[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9].[num_accounts]' />
+            <map key='[process_step]' value='[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8].[process_step]' />
+            <map key='[time_spent]' value='[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8].[time_spent]' />
+            <map key='[variation]' value='[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8].[variation]' />
+            <map key='[visit_id]' value='[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8].[visit_id]' />
+            <map key='[visitor_id]' value='[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8].[visitor_id]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>client_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[client_id]</local-name>
+              <parent-name>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</parent-name>
+              <remote-alias>client_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>abtest.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>105439</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>visitor_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[visitor_id]</local-name>
+              <parent-name>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</parent-name>
+              <remote-alias>visitor_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>abtest.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>105439</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+              <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>visit_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[visit_id]</local-name>
+              <parent-name>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</parent-name>
+              <remote-alias>visit_id</remote-alias>
+              <ordinal>2</ordinal>
+              <family>abtest.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>124723</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+              <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>process_step</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[process_step]</local-name>
+              <parent-name>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</parent-name>
+              <remote-alias>process_step</remote-alias>
+              <ordinal>3</ordinal>
+              <family>abtest.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+              <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date_time</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[date_time]</local-name>
+              <parent-name>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</parent-name>
+              <remote-alias>date_time</remote-alias>
+              <ordinal>4</ordinal>
+              <family>abtest.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>316707</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>variation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[variation]</local-name>
+              <parent-name>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</parent-name>
+              <remote-alias>variation</remote-alias>
+              <ordinal>5</ordinal>
+              <family>abtest.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+              <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>time_spent</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[time_spent]</local-name>
+              <parent-name>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</parent-name>
+              <remote-alias>time_spent</remote-alias>
+              <ordinal>6</ordinal>
+              <family>abtest.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1624</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>error</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[error]</local-name>
+              <parent-name>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</parent-name>
+              <remote-alias>error</remote-alias>
+              <ordinal>7</ordinal>
+              <family>abtest.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>client_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[client_id (client_profiles.csv)]</local-name>
+              <parent-name>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</parent-name>
+              <remote-alias>client_id</remote-alias>
+              <ordinal>8</ordinal>
+              <family>client_profiles.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>70595</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>client_tenure_years</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[client_tenure_years]</local-name>
+              <parent-name>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</parent-name>
+              <remote-alias>client_tenure_years</remote-alias>
+              <ordinal>9</ordinal>
+              <family>client_profiles.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>client_tenure_months</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[client_tenure_months]</local-name>
+              <parent-name>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</parent-name>
+              <remote-alias>client_tenure_months</remote-alias>
+              <ordinal>10</ordinal>
+              <family>client_profiles.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>753</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>client_age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[client_age]</local-name>
+              <parent-name>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</parent-name>
+              <remote-alias>client_age</remote-alias>
+              <ordinal>11</ordinal>
+              <family>client_profiles.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>89</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>12</ordinal>
+              <family>client_profiles.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+              <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_accounts</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_accounts]</local-name>
+              <parent-name>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</parent-name>
+              <remote-alias>num_accounts</remote-alias>
+              <ordinal>13</ordinal>
+              <family>client_profiles.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>balance</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[balance]</local-name>
+              <parent-name>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</parent-name>
+              <remote-alias>balance</remote-alias>
+              <ordinal>14</ordinal>
+              <family>client_profiles.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>70595</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+              <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>calls_6months</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[calls_6months]</local-name>
+              <parent-name>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</parent-name>
+              <remote-alias>calls_6months</remote-alias>
+              <ordinal>15</ordinal>
+              <family>client_profiles.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>logins_6months</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[logins_6months]</local-name>
+              <parent-name>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</parent-name>
+              <remote-alias>logins_6months</remote-alias>
+              <ordinal>16</ordinal>
+              <family>client_profiles.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>activity_score</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[activity_score]</local-name>
+              <parent-name>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</parent-name>
+              <remote-alias>activity_score</remote-alias>
+              <ordinal>17</ordinal>
+              <family>client_profiles.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>70595</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+              <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>login_activity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[login_activity]</local-name>
+              <parent-name>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</parent-name>
+              <remote-alias>login_activity</remote-alias>
+              <ordinal>18</ordinal>
+              <family>client_profiles.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+              <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>calls_activity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[calls_activity]</local-name>
+              <parent-name>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</parent-name>
+              <remote-alias>calls_activity</remote-alias>
+              <ordinal>19</ordinal>
+              <family>client_profiles.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+              <object-id>[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Deutschland&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='abtest.csv' id='abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8'>
+            <properties context=''>
+              <relation connection='textscan.1p8spiy1kxhrcx1bpbqg60jsuaxs' name='abtest.csv' table='[abtest#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='de_DE' separator=','>
+                  <column datatype='integer' name='client_id' ordinal='0' />
+                  <column datatype='string' name='visitor_id' ordinal='1' />
+                  <column datatype='string' name='visit_id' ordinal='2' />
+                  <column datatype='string' name='process_step' ordinal='3' />
+                  <column datatype='datetime' name='date_time' ordinal='4' />
+                  <column datatype='string' name='variation' ordinal='5' />
+                  <column datatype='string' name='time_spent' ordinal='6' />
+                  <column datatype='boolean' name='error' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8' table='[Extract].[abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8]' type='table' />
+            </properties>
+          </object>
+          <object caption='client_profiles.csv' id='client_profiles.csv_275E10B70EF541348141CC172A1CBDD9'>
+            <properties context=''>
+              <relation connection='textscan.1p8spiy1kxhrcx1bpbqg60jsuaxs' name='client_profiles.csv' table='[client_profiles#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='de_DE'>
+                  <column datatype='integer' name='client_id' ordinal='0' />
+                  <column datatype='integer' name='client_tenure_years' ordinal='1' />
+                  <column datatype='integer' name='client_tenure_months' ordinal='2' />
+                  <column datatype='integer' name='client_age' ordinal='3' />
+                  <column datatype='string' name='gender' ordinal='4' />
+                  <column datatype='integer' name='num_accounts' ordinal='5' />
+                  <column datatype='string' name='balance' ordinal='6' />
+                  <column datatype='integer' name='calls_6months' ordinal='7' />
+                  <column datatype='integer' name='logins_6months' ordinal='8' />
+                  <column datatype='string' name='activity_score' ordinal='9' />
+                  <column datatype='string' name='login_activity' ordinal='10' />
+                  <column datatype='string' name='calls_activity' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='client_profiles.csv_275E10B70EF541348141CC172A1CBDD9' table='[Extract].[client_profiles.csv_275E10B70EF541348141CC172A1CBDD9]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[client_id]' />
+              <expression op='[client_id (client_profiles.csv)]' />
+            </expression>
+            <first-end-point object-id='abtest.csv_A5D7D95DE0F4440A9098382F0A94AAC8' />
+            <second-end-point object-id='client_profiles.csv_275E10B70EF541348141CC172A1CBDD9' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Blatt 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B8809B3E-3B4A-430D-9762-3B59EBEAD59E}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Blatt 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7965C709-AC75-4045-97D1-9492EEA6C0CB}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Blatt 1' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
