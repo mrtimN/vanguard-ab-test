@@ -25,4 +25,8 @@ This project evaluates Vanguard’s website redesign through A/B testing, measur
 ## Conclusion
 The new UI **enhances completion rates** but slightly increases errors. The benefits outweigh the downsides, making it a **viable improvement**.
 
-[View Tableau Dashboards](https://public.tableau.com/app/profile/tim.niewolinski/viz/tableau_tim/KPIDashboard?publish=yes)
+### Links
+- [Canvas Presentation](https://www.canva.com/design/DAGeCVck_Bg/IZgY_AZ5Z20JnzMsDedrxA/edit?ui=eyJEIjp7IlAiOnsiQiI6ZmFsc2V9fX0)
+- [Tableau KPI Dashboard](https://public.tableau.com/app/profile/tim.niewolinski/viz/tableau_tim/KPIDashboard?publish=yes)
+- [Tableau Additional Graphs Dashboard](https://public.tableau.com/app/profile/tim.niewolinski/viz/tableau_tim/DemographicDashboard?publish=yes)
+- [Trello Board](https://trello.com/invite/b/67a08a505d2ec1ceaa036529/ATTI3638343980bc3e069c374cc9f4bd13afFD910211/vanguard-ab-test)
