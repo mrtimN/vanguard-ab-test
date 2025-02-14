@@ -1,5 +1,28 @@
-# Vanguard-ab-test
+# Vanguard A/B Testing
 
-### Links
-- [Trello Board](https://trello.com/b/pFYim7K0/vanguard-ab-test)  
-- [Canva Presentation](https://www.canva.com/design/DAGeCVck_Bg/IZgY_AZ5Z20JnzMsDedrxA/edit?utm_content=DAGeCVck_Bg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+## Project Overview
+This project evaluates Vanguard’s website redesign through A/B testing, measuring its impact on user experience and completion rates.
+
+## Data & Methods
+- **Data Sources**: User interactions, demographics, and experiment assignments.
+- **Processing**: Cleaning, merging datasets, and handling missing values.
+- **Analysis**: Completion rates, error rates, and time spent per step.
+
+## Key Findings
+- **Completion Rate**: Increased by **8%** in the test group.
+- **Error Rate**: Test group saw a **3% rise**, indicating usability concerns.
+- **Time Spent**: No significant difference between designs.
+
+## Experiment Design
+- **Duration**: March–June 2017 (~3 months).
+- **Randomization**: Balanced across age and gender.
+- **Limitations**: Possible external factors and device/browser effects.
+
+## Recommendations
+- Improve error handling with real-time prompts.
+- Gather user feedback for additional refinements.
+
+## Conclusion
+The new UI **enhances completion rates** but slightly increases errors. The benefits outweigh the downsides, making it a **viable improvement**.
+
+[View Tableau Dashboards](https://public.tableau.com/app/profile/tim.niewolinski/viz/tableau_tim/KPIDashboard?publish=yes)
